@@ -15,5 +15,16 @@ document.addEventListener('scroll', () => {
 const home = document.querySelector('.home__container')
 const homeHeight = home.offsetHeight;
 document.addEventListener('scroll', () => {
-  home.style.opacity = 1 - window.scollY / homeHeight;
+  home.style.opacity = 1 - window.scrollY / homeHeight;
 });
+
+//arrow 요소 - 투명도 설정
+const arrowUp = document.querySelector('.arrow-up');
+const arrowHeight = arrowUp.offsetHeight;
+document.addEventListener('scroll', () => {
+  if(window.scrollY > homeHeight / 2) {
+    arrowUp.style.opacity = 1;
+  } else {
+    arrowUp.style.opacity = 0;
+  }
+})
