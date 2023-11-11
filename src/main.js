@@ -1,3 +1,5 @@
+'user strict';
+
 //Header에 페이지 아래로 스크롤 시 다크 스타일링 적용!
 const header = document.querySelector('.header')
 const headerHeight = header.getBoundingClientRect().height;
@@ -8,7 +10,6 @@ document.addEventListener('scroll', () => {
     header.classList.remove('header--dark')
   }
 });
-
 
 //아래로 스크롤링 할 수록 Home 섹션에 있는 요소 투명도를 낮추기
 //y축의 좌표가 HOME 섹션에 다다를수록 불투명해지게 만들기
